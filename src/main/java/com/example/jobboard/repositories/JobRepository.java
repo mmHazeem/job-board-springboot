@@ -1,4 +1,4 @@
-package repositories;
+package com.example.jobboard.repositories;
 
 import com.example.jobboard.entities.Job;
 import org.springframework.data.jpa.repository.JpaRepository;

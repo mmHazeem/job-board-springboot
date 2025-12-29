@@ -2,7 +2,7 @@ package com.example.jobboard.services;
 
 import com.example.jobboard.entities.Job;
 import org.springframework.stereotype.Service;
-import repositories.JobRepository;
+import com.example.jobboard.repositories.JobRepository;
 
 import java.util.List;
 
