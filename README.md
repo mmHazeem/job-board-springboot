@@ -46,6 +46,8 @@ job-board-springboot/
 ├── README.md
 └── pom.xml
 
+![Build Status](https://github.com/mmHazeem/job-board-springboot/actions/workflows/build.yml/badge.svg)
+
 ## Setup & Installation
 ### Lokale Entwicklung
 ```bash
