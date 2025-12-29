@@ -46,8 +46,6 @@ job-board-springboot/
 ├── README.md
 └── pom.xml
 
-![Build Status](https://github.com/mmHazeem/job-board-springboot/actions/workflows/build.yml/badge.svg)
-
 ## Setup & Installation
 ### Lokale Entwicklung
 ```bash
@@ -69,3 +67,6 @@ mvn test
 =======
 mvn test
 >>>>>>> 96feb6c (Job Board API)
+```
+![Build Status](https://github.com/mmHazeem/job-board-springboot/actions/workflows/build.yml/badge.svg)
+
