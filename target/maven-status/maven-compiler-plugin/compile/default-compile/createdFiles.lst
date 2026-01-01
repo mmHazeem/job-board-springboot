@@ -1,2 +1,6 @@
 com/example/jobboard/entities/Job.class
+com/example/jobboard/entities/Company.class
 com/example/jobboard/App.class
+com/example/jobboard/services/JobService.class
+com/example/jobboard/repositories/JobRepository.class
+com/example/jobboard/controller/JobController.class
