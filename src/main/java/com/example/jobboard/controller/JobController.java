@@ -1,5 +1,6 @@
 package com.example.jobboard.controller;
 
+import com.example.jobboard.dtos.JobDto;
 import com.example.jobboard.entities.Job;
 import com.example.jobboard.services.JobService;
 import org.springframework.web.bind.annotation.*;
@@ -16,9 +17,27 @@ public class JobController {
     }
 
     @GetMapping
-    public List<Job> getAllJobs() {return jobService.findAll(); }
+    public List<JobDto> getAllJobs() {
+        return jobService.findAll().stream()
+            .map(job -> new JobDto(
+                    job.getTitle(),
+                    job.getDescription(),
+                    job.getLocation(),
+                    job.getSalary(),
+                    job.getCompany() !=null ?job.getCompany().getName() : null
+            )).toList()
+            ; }
 
     @PostMapping
-    public Job createJob(@RequestBody Job job) { return jobService.save(job); }
+    public JobDto createJob(@RequestBody Job job) {
+        Job savedJob = jobService.save(job);
+        return new JobDto(
+                savedJob.getTitle(),
+                savedJob.getDescription(),
+                savedJob.getLocation(),
+                savedJob.getSalary(),
+                savedJob.getCompany() != null ? savedJob.getCompany().getName() :  null
+        );
+    }
 
 }

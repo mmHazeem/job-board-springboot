@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(controllers = JobController.class)
-@AutoConfigureMockMvc(addFilters = false) // disables Spring Security filters
+@AutoConfigureMockMvc(addFilters = false)
 class JobControllerTest {
 
     @Autowired

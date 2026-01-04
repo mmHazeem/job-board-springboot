@@ -1,6 +1,7 @@
 package com.example.jobboard.services;
 
 import com.example.jobboard.entities.Job;
+import com.example.jobboard.repositories.CompanyRepository;
 import com.example.jobboard.repositories.JobRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,8 @@ class JobServiceTest {
     @BeforeEach
     void setUp() {
         jobRepository = mock(JobRepository.class);
-        jobService = new JobService(jobRepository);
+        CompanyRepository companyRepository = mock(CompanyRepository.class);
+        jobService = new JobService(jobRepository, companyRepository);
     }
     @Test
     void findAll() {

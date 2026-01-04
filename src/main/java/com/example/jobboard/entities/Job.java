@@ -1,5 +1,6 @@
 package com.example.jobboard.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +16,8 @@ public class Job {
     private String description;
     private String location;
     private Double salary;
-    @ManyToOne
+
+    @ManyToOne(cascade = CascadeType.ALL)
     private Company company;
 }
 
